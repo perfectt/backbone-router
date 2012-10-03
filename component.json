@@ -1,0 +1,10 @@
+{
+  "name": "backbone-router"
+, "repo": "perfectt/backbone-router"
+, "description": "Backbone.js Router modifications for component(1)"
+, "version": "0.0.1"
+, "scripts": [ "index.js" ]
+, "dependencies": {
+    "perfectt/backbone": "*"
+  }
+}

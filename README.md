@@ -1,4 +1,5 @@
-backbone-router
-===============
 
-Backbone.js Router modifications for component(1)
+# backbone-router
+
+  Backbone.js Router modifications for component(1)
+
