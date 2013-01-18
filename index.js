@@ -9,36 +9,34 @@ var Backbone = require('backbone');
  * Expose the new router
  */
 
-module.exports = Backbone.Router.extend({
+var Router = module.exports = Backbone.Router.extend();
 
-  /**
-   * Pause
-   */
+/**
+ * Pause
+ */
 
-  pause: function() {}
+Router.prototype.pause = function() {};
 
-  /**
-   * Resume
-   */
+/**
+ * Resume
+ */
 
-, resume: function() {}
+Router.prototype.resume = function() {};
 
-  /**
-   * Setup
-   */
+/**
+ * Setup
+ */
 
-, setup: function() {
-    this.views = {};
-  
-    this.on('pause', function() {
-      if (this.view) this.view.trigger('renderedStateChange', false);
-      this.pause();
-    }, this);
+Router.prototype.setup = function() {
+  this.views = {};
 
-    this.on('resume', function() {
-      if (this.view) this.view.trigger('renderedStateChange', true);
-      this.resume();
-    }, this);
-  }
+  this.on('pause', function() {
+    if (this.view) this.view.trigger('renderedStateChange', false);
+    this.pause();
+  }, this);
 
-});
+  this.on('resume', function() {
+    if (this.view) this.view.trigger('renderedStateChange', true);
+    this.resume();
+  }, this);
+};
